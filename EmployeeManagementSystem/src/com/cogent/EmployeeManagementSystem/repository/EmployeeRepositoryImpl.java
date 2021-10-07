@@ -56,6 +56,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 
 	}
 
+//Deletion
 	public String deleteEmployeeById(String id) {
 		Employee employee = this.getEmployeeById(id);
 		// 1 that id exists or not
@@ -80,7 +81,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		return "not found";
 	}
 
-//getting employee object directly
+//getting employee object directly Delete
 	private int getIndex(Employee employee) {
 		for (int i = 0; i < employees.length; i++) {
 			if (employees[i].equals(employee)) {
@@ -90,23 +91,40 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 		return -1;
 	}
 
-@Override
-public void deleteAllEmployees() {
-	// TODO Auto-generated method stub
-	
-}
+	@Override
+	public void deleteAllEmployees() {
+		// TODO Auto-generated method stub
 
-@Override
-public Employee[] getEmployee() {
-	// TODO Auto-generated method stub
-	return null;
-}
+	}
+
+	@Override
+	public Employee[] getEmployee() {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
 
 @Override
 public String updateEmployee(String id, Employee employee) {
 	// TODO Auto-generated method stub
-	return null;
+	return null;}
+//searching for name
+	private static int index = 0;
+
+	public Employee[] getEmployeesByName(String name) {
+		{
+			for(Employee employee : employees) {
+		Employee[] employeesTemp= new Employee[employees.length];
+		if(employee.getFirstName().equals(name)) {
+			employeesTemp[index++] = employee;
+			
+		}
+	}
+			Employee[] employeesTemp = null;
+			return employeesTemp;
+
 }
-	
+
+}
 
 }

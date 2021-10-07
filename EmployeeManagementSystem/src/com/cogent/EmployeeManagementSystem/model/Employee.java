@@ -1,12 +1,41 @@
 package com.cogent.EmployeeManagementSystem.model;
 
+import java.util.Objects;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+
 // this data @. DOes overrides for you
-@Data
-@AllArgsConstructor
+//@Data
+//@AllArgsConstructor
+
+
+
+
+
+
+
 public class Employee {
+	
+	
+	
+	
+	
+	//@Override
+	//public int hashCode() {
+	//	return Objects.hash(address, empSalary, employeeId, firstName, lastName);
+	//}
+
+	/*
+	 * @Override public boolean equals(Object obj) { if (this == obj) return true;
+	 * if (obj == null) return false; if (getClass() != obj.getClass()) return
+	 * false; Employee other = (Employee) obj; return Objects.equals(address,
+	 * other.address) && Float.floatToIntBits(empSalary) ==
+	 * Float.floatToIntBits(other.empSalary) && Objects.equals(employeeId,
+	 * other.employeeId) && Objects.equals(firstName, other.firstName) &&
+	 * Objects.equals(lastName, other.lastName); }
+	 */
 	public float calculateSalary() {
 		return empSalary + 500;
 

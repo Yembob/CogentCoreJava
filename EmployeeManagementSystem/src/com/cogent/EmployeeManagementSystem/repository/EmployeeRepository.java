@@ -6,8 +6,9 @@ public interface EmployeeRepository {
 		public String deleteEmployeeById(String id);
 		public void deleteAllEmployees();
 		public Employee getEmployeeById(String id);
-		public Employee[] getEmployee();
+		public Employee[] getEmployees();
 		public String updateEmployee(String id, Employee employee);
+		public boolean isEmployeeExists(String id);
 		
 		
 		

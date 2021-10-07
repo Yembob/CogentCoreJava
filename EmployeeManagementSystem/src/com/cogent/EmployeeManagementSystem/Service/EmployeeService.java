@@ -8,9 +8,7 @@ public interface EmployeeService {
 	public void deleteAllEmployees();
 	public Employee getEmployeeById(String id);
 	public Employee[] getEmployees();
+	public Employee[] getEmployeesByName(String name);
 	public String updateEmployee(String id, Employee employee);
-	public static EmployeeService getInstance() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
